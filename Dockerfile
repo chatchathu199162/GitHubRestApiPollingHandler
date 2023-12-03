@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["/PollingScheduler.csproj", "PollingScheduler/"]
-RUN dotnet restore "/PollingScheduler.csproj"
+COPY ["PollingScheduler.csproj", "."]
+RUN dotnet restore "./PollingScheduler.csproj"
 COPY . .
-WORKDIR "/src/PollingScheduler"
+WORKDIR "/src/."
 RUN dotnet build "PollingScheduler.csproj" -c Release -o /app/build
 
 FROM build AS publish
