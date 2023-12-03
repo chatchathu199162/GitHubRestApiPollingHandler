@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["ProductivityTracker/DeveloperProductivityTracker.csproj", "ProductivityTracker/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["/PollingScheduler.csproj", "PollingScheduler/"]
+RUN dotnet restore "/PollingScheduler.csproj"
 COPY . .
-WORKDIR "/src/ProductivityTracker"
-RUN dotnet build "DeveloperProductivityTracker.csproj" -c Release -o /app/build
+WORKDIR "/src/PollingScheduler"
+RUN dotnet build "PollingScheduler.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DeveloperProductivityTracker.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "PollingScheduler.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DeveloperProductivityTracker.dll"]
+ENTRYPOINT ["dotnet", "PollingScheduler.dll"]
