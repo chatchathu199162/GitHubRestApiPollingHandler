@@ -10,7 +10,7 @@ namespace PollingScheduler.Services
     {
         private readonly HttpClient client = new();
         private const string GITHUBBASEURL = "https://api.github.com";
-        private const string TOKEN = "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";
+        private const string TOKEN = "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";
         private const string USERNAME = "chatchathu199162";
         private const string REPO = "generative-ai-for-beginners";
         private readonly CommitStatDataService m_CommitStatDataService;
