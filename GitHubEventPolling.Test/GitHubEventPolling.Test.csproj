@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GitHubRestApiPollingHandler\PollingScheduler.csproj" />
+    <ProjectReference Include="..\PollingScheduler.csproj" />
   </ItemGroup>
 
 </Project>
