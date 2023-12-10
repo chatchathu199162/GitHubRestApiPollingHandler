@@ -5,10 +5,6 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollingScheduler", "PollingScheduler.csproj", "{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubEventPolling.Test", "GitHubEventPolling.Test\GitHubEventPolling.Test.csproj", "{7864ED11-054B-439B-A320-737B06F3B997}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSuite", "..\TestSuite\TestSuite.csproj", "{1B678E05-C404-4C6A-8F11-D47D7A10A527}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7864ED11-054B-439B-A320-737B06F3B997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7864ED11-054B-439B-A320-737B06F3B997}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7864ED11-054B-439B-A320-737B06F3B997}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7864ED11-054B-439B-A320-737B06F3B997}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B678E05-C404-4C6A-8F11-D47D7A10A527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B678E05-C404-4C6A-8F11-D47D7A10A527}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B678E05-C404-4C6A-8F11-D47D7A10A527}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B678E05-C404-4C6A-8F11-D47D7A10A527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
