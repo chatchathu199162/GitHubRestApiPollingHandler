@@ -1,6 +1,7 @@
 using System.Transactions;
 using PollingScheduler.DataBase.DBServices;
 using PollingScheduler.GitHubModels;
+using Xunit;
 
 namespace TestSuite
 {
