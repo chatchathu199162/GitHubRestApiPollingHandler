@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollingScheduler", "PollingScheduler.csproj", "{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSuite", "..\TestSuite\TestSuite.csproj", "{C378982F-8C8F-4F79-B628-4AE3CA1E7C7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B151778-D8F8-4950-90FA-7E54E7CAC3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C378982F-8C8F-4F79-B628-4AE3CA1E7C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C378982F-8C8F-4F79-B628-4AE3CA1E7C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C378982F-8C8F-4F79-B628-4AE3CA1E7C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C378982F-8C8F-4F79-B628-4AE3CA1E7C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
