@@ -11,5 +11,11 @@ namespace PollingScheduler.Controllers
         {
             return Ok("Pong");
         }
+
+        [HttpGet, Route("/status/Health")]
+        public IActionResult Health()
+        {
+            return Ok("Healthy");
+        }
     }
 }
