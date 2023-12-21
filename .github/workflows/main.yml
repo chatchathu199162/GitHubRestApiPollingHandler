@@ -30,8 +30,7 @@ jobs:
     name: build example and deploy to minikube
     steps:
       - uses: actions/checkout@v2 
-      - name: Build & Deploy
-       
+     
       - name: Debug
         run: |
            ls -al
