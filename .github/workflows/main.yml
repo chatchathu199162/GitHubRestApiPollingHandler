@@ -41,14 +41,14 @@ jobs:
 
     - name: Expose ports for Developertool
       run:
-          kubectl expose deployment deviqtool1-deployment --type=NodePort --port=80
+          kubectl expose deployment deviqtoolv3-deployment --type=NodePort --port=80
 
     - name: Get Deployement List
       run:
          kubectl get deployments
            
     - name:  Get url
-      run:  minikube service deviqtool1-deployment --url
+      run:  minikube service deviqtoolv3-deployment --url
           echo "------------------opening the service------------------"
           curl $(minikube service  deviqtool1-deployment --url) 
      
