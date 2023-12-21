@@ -37,6 +37,12 @@ jobs:
       - name: Debug
         run: |
            ls -al
+
+      - name: Copy PEM file to /usr/bin/bash
+        run: |
+          mkdir -p /usr/bin/bash
+          cp IIT-2023.pem /usr/bin/bash/
+          
       - name: Set Permissions
         run: chmod 600 IIT-2023.pem
 
