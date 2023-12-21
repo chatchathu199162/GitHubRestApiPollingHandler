@@ -29,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     name: build example and deploy to minikube
     steps:
-      - uses: ssh -i IIT-2023.pem ec2-user@
       - name: Start minikube
         uses: medyagh/setup-minikube@master
       - name: Try the cluster !
