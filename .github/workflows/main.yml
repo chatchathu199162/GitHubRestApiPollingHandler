@@ -33,6 +33,13 @@ jobs:
         uses: medyagh/setup-minikube@master
       - name: Try the cluster !
         run: kubectl get pods -A
+      
+      - name: Debug
+        run: |
+           ls -al
+      - name: Set Permissions
+        run: chmod 600 path/to/your/file.pem
+
       - name: Connect to EC2 Instance
         run: |
          ssh -i IIT-2023.pem ec2-user@54.166.162.94
