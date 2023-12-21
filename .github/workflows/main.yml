@@ -35,8 +35,20 @@ jobs:
     - name: Try the cluster !
       run: kubectl get pods -A
 
-    - name: Deploy developerproductivitytool microservice to minikube
+    - name: Deploy deviqtool1-deployment microservice to minikube
       run:
          kubectl apply -f tool.yaml
+
+    - name: Expose ports for Developertool
+      run:
+          kubectl expose deployment deviqtool1-deployment --type=NodePort --port=80
+
+    - name: Get Deployement List
+      run:
+         kubectl get deployments
            
-   
+    - name:  Get url
+      run:  minikube service deviqtool1-deployment --url
+          echo "------------------opening the service------------------"
+          curl $(minikube service  deviqtool1-deployment --url) 
+     
