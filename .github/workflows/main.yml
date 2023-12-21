@@ -38,7 +38,7 @@ jobs:
         run: |
            ls -al
       - name: Set Permissions
-        run: chmod 600 path/to/your/file.pem
+        run: chmod 600 IIT-2023.pem
 
       - name: Connect to EC2 Instance
         run: |
