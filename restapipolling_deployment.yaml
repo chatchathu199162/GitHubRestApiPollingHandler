@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restapipolling-deployment
+spec:
+  selector:
+    matchLabels:
+      app: restapipolling
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: restapipolling
+    spec:
+      containers:
+      - name: restapipolling
+        image: chathurani/githubapipollinghandler:1.0.0
+        ports:
+        - containerPort: 80
