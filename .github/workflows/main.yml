@@ -29,10 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     name: build example and deploy to minikube
     steps:
-      - name: Start minikube
-        uses: medyagh/setup-minikube@master
-      - name: Try the cluster !
-        run: kubectl get pods -A
       
       - name: Debug
         run: |
@@ -40,7 +36,6 @@ jobs:
 
       - name: Copy PEM file to /usr/bin/bash
         run: |
-          mkdir -p /usr/bin/bash
           cp IIT-2023.pem /usr/bin/bash/
           
       - name: Set Permissions
@@ -49,5 +44,10 @@ jobs:
       - name: Connect to EC2 Instance
         run: |
          ssh -i IIT-2023.pem ec2-user@54.166.162.94
+         
+      - name: Start minikube
+        uses: medyagh/setup-minikube@master
+      - name: Try the cluster !
+        run: kubectl get pods -A
            
    
