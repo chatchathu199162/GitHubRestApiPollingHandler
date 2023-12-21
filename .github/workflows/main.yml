@@ -46,9 +46,13 @@ jobs:
     - name: Get Deployement List
       run:
          kubectl get deployments
+         
+    - name: Get Services
+      run:
+          kubectl get svc  
            
     - name:  Get url
-      run:  minikube service deviqtoolv3-deployment --url
+      run: minikube service list
           echo "------------------opening the service------------------"
           curl $(minikube service  deviqtool1-deployment --url) 
      
