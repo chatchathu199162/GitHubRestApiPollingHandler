@@ -27,7 +27,7 @@ jobs:
           tags: chathurani/githubapipollinghandlerv1:1.0.0 
  job1:
     runs-on: ubuntu-latest
-    name: build example and deploy to minikube
+    name: deploy to minikube
     steps:
     - uses: actions/checkout@v2
     - name: Start minikube
