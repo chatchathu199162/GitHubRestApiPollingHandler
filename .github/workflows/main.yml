@@ -53,7 +53,7 @@ jobs:
           
     - name: Deployrestapipolling-deployment microservice to minikube
       run:
-         kubectl apply -f restapipolling_deployment.yaml.yaml
+         kubectl apply -f restapipolling_deployment.yaml
 
     - name: Expose ports for Developertool
       run:
