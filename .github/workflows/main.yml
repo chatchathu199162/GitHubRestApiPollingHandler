@@ -37,7 +37,7 @@ jobs:
 
     - name: Deploy deviqtool1-deployment microservice to minikube
       run:
-         kubectl apply -f res.yaml
+         kubectl apply -f tool.yaml
 
     - name: Expose ports for Developertool
       run:
@@ -50,9 +50,10 @@ jobs:
     - name: Get Services
       run:
           kubectl get svc  
+          
     - name: Deployrestapipolling-deployment microservice to minikube
       run:
-         kubectl apply -f tool.yaml
+         kubectl apply -f restapipolling_deployment.yaml.yaml
 
     - name: Expose ports for Developertool
       run:
