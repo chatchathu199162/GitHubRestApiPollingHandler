@@ -25,20 +25,14 @@ jobs:
         with:
           push: true
           tags: chathurani/githubapipollinghandlerv1:1.0.0 
-  job1:
-     runs-on: ubuntu-latest
-     name: build example and deploy to minikube
-     steps:
+ job1:
+    runs-on: ubuntu-latest
+    name: build example and deploy to minikube
+    steps:
       - uses: actions/checkout@v2
       - name: Start minikube
-       uses: medyagh/setup-minikube@master
+        uses: medyagh/setup-minikube@master
       - name: Try the cluster !
-      run: kubectl get pods -A
-      - name: Build image
-      run: |
-        export SHELL=/bin/bash
-        eval $(minikube -p minikube docker-env)
-        docker build -f ./Dockerfile -t local/developerproductivitytool .
-        echo -n "verifying images:"
-        docker images        
+        run: kubectl get pods -A
+           
    
