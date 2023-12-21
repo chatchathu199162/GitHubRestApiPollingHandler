@@ -35,6 +35,14 @@ jobs:
     - name: Try the cluster !
       run: kubectl get pods -A
 
+
+
+    - name: Start minikube with docker
+      run: minikube start --driver=docker
+      
+    - name: Minikube Status
+      run: minikube status
+      
     - name: Deploy deviqtool1-deployment microservice to minikube
       run:
          kubectl apply -f tool.yaml
