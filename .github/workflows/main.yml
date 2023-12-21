@@ -34,16 +34,10 @@ jobs:
         run: |
            ls -al
 
-      - name: Copy PEM file to /usr/bin/bash
-        run: |
-          cp IIT-2023.pem /usr/bin/bash/
-          
-      - name: Set Permissions
-        run: chmod 600 IIT-2023.pem
 
       - name: Connect to EC2 Instance
         run: |
-         ssh -i IIT-2023.pem ec2-user@54.166.162.94
+         ssh -i ${{EC2_KEY}} ec2-user@54.166.162.94
          
       - name: Start minikube
         uses: medyagh/setup-minikube@master
