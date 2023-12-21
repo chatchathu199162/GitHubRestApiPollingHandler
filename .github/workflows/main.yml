@@ -34,5 +34,9 @@ jobs:
       uses: medyagh/setup-minikube@master
     - name: Try the cluster !
       run: kubectl get pods -A
+
+    - name: Deploy developerproductivitytool microservice to minikube
+      run:
+         kubectl apply -f tool.yaml
            
    
